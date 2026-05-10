@@ -15,18 +15,21 @@ import {
   Layers,
   ListChecks,
   Settings,
-  Table2,
 } from "lucide-react";
 
 export function getStaticPaths() {
-  return products.map((product) => ({ params: { slug: product.slug } }));
+  return products.map((product) => ({
+    params: {
+      slug: product.slug,
+    },
+  }));
 }
 
 const { slug } = Astro.params;
 const product = getProduct(slug ?? "");
 
 if (!product) {
-  return Astro.redirect("/");
+  return Astro.redirect("/products");
 }
 
 const relatedProducts = getRelatedProducts(product.related).slice(0, 3);
@@ -39,7 +42,6 @@ const hasSpecColumns = Boolean(product.specColumns?.length);
 const hasSpecifications = hasSpecTables || hasSpecColumns;
 const hasRelatedProducts = relatedProducts.length > 0;
 ---
-
 <BaseLayout
   title={product.title}
   description={product.summary}
