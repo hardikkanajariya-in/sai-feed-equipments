@@ -1,0 +1,58 @@
+---
+import type { Product } from "@/data/products";
+import { ArrowRight, Settings, Image as ImageIcon } from "lucide-react";
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+---
+
+<a
+  href={`/products/${product.slug}`}
+  class="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-brand-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl"
+>
+  <div class="relative aspect-[4/3] overflow-hidden bg-white">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(0,166,81,0.10),transparent_45%)]"></div>
+
+    <img
+      src={product.image}
+      alt={product.imageAlt}
+      width="640"
+      height="480"
+      loading="lazy"
+      decoding="async"
+      class="relative h-full w-full object-contain p-5 transition duration-700 group-hover:scale-105"
+    />
+
+    <div class="absolute right-4 top-4 flex size-10 translate-x-2 -translate-y-2 items-center justify-center rounded-full bg-brand-navy text-white opacity-0 shadow-lg transition duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+      <ArrowRight className="size-5" />
+    </div>
+  </div>
+
+  <div class="flex flex-1 flex-col p-6">
+    <div class="flex items-start gap-3">
+      <div class="mt-1 flex size-10 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
+        <Settings className="size-5" />
+      </div>
+
+      <div>
+        <h3 class="text-xl font-black leading-tight text-brand-navy">
+          {product.title}
+        </h3>
+
+        <p class="mt-3 line-clamp-3 text-sm leading-7 text-brand-muted">
+          {product.summary}
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-auto pt-6">
+      <span class="inline-flex min-h-11 items-center rounded-full bg-brand-green/10 px-5 text-sm font-black text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
+        View Details
+        <ArrowRight className="ml-2 size-4 transition duration-300 group-hover:translate-x-1" />
+      </span>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,29 @@
+---
+import { site } from "@/data/site";
+---
+
+<form action={`mailto:${site.email}`} method="post" enctype="text/plain" class="grid gap-4 rounded-3xl border border-brand-border bg-card p-5 shadow-sm sm:p-6">
+  <div class="grid gap-2">
+    <label for="name" class="text-sm font-bold text-brand-navy">Name</label>
+    <input id="name" name="Name" required class="min-h-12 rounded-2xl border border-brand-border bg-white px-4 text-base outline-none transition focus:border-brand-green focus:ring-4 focus:ring-brand-green/10" />
+  </div>
+
+  <div class="grid gap-2">
+    <label for="phone" class="text-sm font-bold text-brand-navy">Phone</label>
+    <input id="phone" name="Phone" required class="min-h-12 rounded-2xl border border-brand-border bg-white px-4 text-base outline-none transition focus:border-brand-green focus:ring-4 focus:ring-brand-green/10" />
+  </div>
+
+  <div class="grid gap-2">
+    <label for="email" class="text-sm font-bold text-brand-navy">Email</label>
+    <input id="email" name="Email" type="email" class="min-h-12 rounded-2xl border border-brand-border bg-white px-4 text-base outline-none transition focus:border-brand-green focus:ring-4 focus:ring-brand-green/10" />
+  </div>
+
+  <div class="grid gap-2">
+    <label for="requirement" class="text-sm font-bold text-brand-navy">Requirement</label>
+    <textarea id="requirement" name="Requirement" rows="5" required class="rounded-2xl border border-brand-border bg-white px-4 py-3 text-base outline-none transition focus:border-brand-green focus:ring-4 focus:ring-brand-green/10"></textarea>
+  </div>
+
+  <button type="submit" class="inline-flex min-h-12 items-center justify-center rounded-full bg-brand-green px-7 text-sm font-black text-white transition hover:bg-brand-green-dark">
+    Send Inquiry
+  </button>
+</form>

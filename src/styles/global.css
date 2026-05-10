@@ -6,28 +6,20 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
-
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
-
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -54,28 +46,20 @@
 
   --background: #f7f3d6;
   --foreground: #1f2933;
-
   --card: #fffcf2;
   --card-foreground: #1f2933;
-
   --popover: #fffcf2;
   --popover-foreground: #1f2933;
-
   --primary: #00a651;
   --primary-foreground: #ffffff;
-
   --secondary: #031a20;
   --secondary-foreground: #ffffff;
-
   --muted: #efeac6;
   --muted-foreground: #6b7280;
-
   --accent: #1e5a78;
   --accent-foreground: #ffffff;
-
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-
   --border: #d8d8c2;
   --input: #d8d8c2;
   --ring: #00a651;
@@ -91,6 +75,7 @@
 }
 
 * {
+  box-sizing: border-box;
   border-color: var(--border);
 }
 
@@ -118,7 +103,8 @@ button,
 a,
 input,
 textarea,
-select {
+select,
+summary {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -136,6 +122,10 @@ a {
   text-decoration: none;
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
 ::selection {
   background: #00a651;
   color: #ffffff;
@@ -150,4 +140,14 @@ a {
   .container-page {
     width: min(100% - 3rem, 80rem);
   }
+}
+
+.prose-sfe p {
+  line-height: 1.8;
+}
+
+.prose-sfe ul {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
 }

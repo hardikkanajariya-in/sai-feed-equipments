@@ -1,0 +1,383 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CTASection from "@/components/site/CTASection.astro";
+import { site } from "@/data/site";
+import {
+  ArrowRight,
+  BadgeCheck,
+  Building2,
+  Factory,
+  Headphones,
+  Mail,
+  Phone,
+  Settings,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
+import PageHero from "@/components/site/PageHero.astro";
+
+const processFocus = [
+  "Feed plants and spare equipment",
+  "Poultry feeds",
+  "Cattle feeds and fish feeds",
+  "Bio-mass",
+];
+
+const capabilities = [
+  {
+    title: "Complete plant solutions",
+    description:
+      "Complete feed plant solutions for the feed industry with machinery, automation and process support.",
+    icon: Factory,
+  },
+  {
+    title: "Feed safety and traceability",
+    description:
+      "Plants are designed for complete feed safety and traceability through automation and process monitoring.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Remote and on-site support",
+    description:
+      "Reliable process operations through 24x7 remote support facility and on-site support when necessary.",
+    icon: Headphones,
+  },
+];
+
+const timeline = [
+  {
+    label: "Manufacturing focus",
+    title: "Feed plants and spare equipment",
+    text: "Sai Feed Equipment manufactures feed plants and spare equipment for poultry feeds, cattle feeds, fish feeds and bio-mass.",
+  },
+  {
+    label: "Industry knowledge",
+    title: "Experience since 1997",
+    text: "Since 1997, the company has gained knowledge and insight into the demands of specific feed markets.",
+  },
+  {
+    label: "Plant delivery",
+    title: "Tailor-made pelleting solutions",
+    text: "The company strives to provide efficient plants that are easy to operate and low on maintenance.",
+  },
+];
+
+const teamMembers = [
+  {
+    name: "Vikram",
+    role: "Business Contact",
+    description:
+      "Primary contact for machinery, plant solution and business inquiry communication.",
+    email: site.email,
+    phone: site.phones?.[0],
+  },
+  {
+    name: "Sai Feed Equipment Team",
+    role: "Plant Solution & Support Team",
+    description:
+      "Support team for feed plant machinery, pelleting solutions, automation and spare equipment requirements.",
+    email: site.email,
+    phone: site.phones?.[1],
+  },
+];
+---
+
+<BaseLayout
+  title="About"
+  description="About Sai Feed Equipment and its feed plant, pellet plant and biomass solution focus."
+>
+  <PageHero
+    eyebrow="About Sai Feed Equipment"
+    title="Advanced solution for feed market"
+    description={site.backCoverTagline}
+    image="/images/solutions/animal-feed-plant.png"
+    imageAlt="Sai Feed Equipment animal feed plant solution"
+  />
+
+  <section class="bg-background py-16 sm:py-20 lg:py-24">
+    <div class="container-page">
+      <div class="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+        <div class="lg:sticky lg:top-28">
+          <p
+            class="text-sm font-black uppercase tracking-[0.28em] text-brand-green"
+          >
+            Company
+          </p>
+
+          <h2
+            class="mt-4 text-4xl font-black leading-tight tracking-tight text-brand-navy sm:text-5xl"
+          >
+            Feed plants, spare equipment and pelleting solutions
+          </h2>
+
+          <p class="mt-6 text-base leading-8 text-brand-muted">
+            {site.description}
+          </p>
+        </div>
+
+        <div>
+          <div class="space-y-6 text-lg leading-9 text-brand-muted">
+            <p>
+              Sai Feed Equipment manufactures feed plants and spare equipment
+              for poultry feeds, cattle feeds, fish feeds and bio-mass
+              applications.
+            </p>
+
+            <p>
+              The company provides complete feed plant solutions for the feed
+              industry. Since 1997, this has helped gain extensive knowledge and
+              insight into the demands of specific feed markets.
+            </p>
+
+            <p>
+              Sai Feed Equipment strives to provide tailor-made complete
+              solutions in pelleting with efficient plants that are easy to
+              operate and low on maintenance.
+            </p>
+          </div>
+
+          <div class="mt-9 grid gap-3 sm:grid-cols-2">
+            {
+              processFocus.map((item) => (
+                <div class="flex min-h-14 items-center gap-3 rounded-full border border-brand-border bg-card px-5 shadow-sm">
+                  <BadgeCheck className="size-5 shrink-0 text-brand-green" />
+                  <span class="text-sm font-black text-brand-navy">{item}</span>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-brand-card py-16 sm:py-20 lg:py-24">
+    <div class="container-page">
+      <div class="mx-auto max-w-3xl text-center">
+        <p
+          class="text-sm font-black uppercase tracking-[0.28em] text-brand-green"
+        >
+          What Defines The Company
+        </p>
+
+        <h2
+          class="mt-4 text-4xl font-black tracking-tight text-brand-navy sm:text-5xl"
+        >
+          Built around reliable plant operation
+        </h2>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        {
+          capabilities.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <article class="group relative overflow-hidden rounded-[2rem] border border-brand-border bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl">
+                <div class="absolute right-0 top-0 size-28 translate-x-8 -translate-y-8 rounded-full bg-brand-green/10 transition duration-300 group-hover:scale-125" />
+
+                <div class="relative flex size-14 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
+                  <Icon className="size-7" />
+                </div>
+
+                <h3 class="relative mt-6 text-xl font-black text-brand-navy">
+                  {item.title}
+                </h3>
+
+                <p class="relative mt-4 text-sm leading-7 text-brand-muted">
+                  {item.description}
+                </p>
+              </article>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-16 sm:py-20 lg:py-24">
+    <div class="container-page">
+      <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+        <div>
+          <p
+            class="text-sm font-black uppercase tracking-[0.28em] text-brand-green"
+          >
+            Journey
+          </p>
+
+          <h2
+            class="mt-4 text-4xl font-black tracking-tight text-brand-navy sm:text-5xl"
+          >
+            From manufacturing focus to complete plant solutions
+          </h2>
+
+          <p class="mt-6 text-base leading-8 text-brand-muted">
+            The company focuses on manufacturing, plant solution delivery and
+            support for feed market requirements.
+          </p>
+        </div>
+
+        <div class="relative">
+          <div
+            class="absolute left-6 top-6 hidden h-[calc(100%-3rem)] w-px bg-brand-border sm:block"
+          >
+          </div>
+
+          <div class="grid gap-5">
+            {
+              timeline.map((item, index) => (
+                <article class="relative rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm transition duration-300 hover:border-brand-green hover:shadow-lg sm:ml-16">
+                  <div class="absolute -left-[4.65rem] top-6 hidden size-12 items-center justify-center rounded-full border border-brand-border bg-background text-sm font-black text-brand-green sm:flex">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  <p class="text-xs font-black uppercase tracking-[0.22em] text-brand-green">
+                    {item.label}
+                  </p>
+
+                  <h3 class="mt-2 text-xl font-black text-brand-navy">
+                    {item.title}
+                  </h3>
+
+                  <p class="mt-3 text-sm leading-7 text-brand-muted">
+                    {item.text}
+                  </p>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="relative overflow-hidden bg-brand-navy py-16 text-white sm:py-20 lg:py-24"
+  >
+    <div class="absolute inset-0 opacity-25">
+      <div
+        class="absolute -right-32 top-10 size-96 rounded-full bg-brand-green blur-3xl"
+      >
+      </div>
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:56px_56px]"
+      >
+      </div>
+    </div>
+
+    <div class="container-page relative">
+      <div class="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
+        <div>
+          <p
+            class="text-sm font-black uppercase tracking-[0.28em] text-brand-green"
+          >
+            Manufactures Of
+          </p>
+
+          <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+            Catalogue scope
+          </h2>
+
+          <p class="mt-6 text-base leading-8 text-white/65">
+            Sai Feed Equipment focuses on feed plant machinery, spare equipment
+            and biomass related plant requirements.
+          </p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          {
+            site.manufactures.map((item) => (
+              <div class="group flex min-h-24 items-center gap-4 rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:bg-white/[0.07]">
+                <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/15 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
+                  <Settings className="size-6" />
+                </div>
+
+                <p class="text-lg font-black leading-6 text-white">{item}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hidden bg-background py-16 sm:py-20 lg:py-24">
+    <div class="container-page">
+      <div class="mx-auto max-w-3xl text-center">
+        <p
+          class="text-sm font-black uppercase tracking-[0.28em] text-brand-green"
+        >
+          Our Team
+        </p>
+
+        <h2
+          class="mt-4 text-4xl font-black tracking-tight text-brand-navy sm:text-5xl"
+        >
+          Important people and support contacts
+        </h2>
+
+        <p class="mt-6 text-base leading-8 text-brand-muted">
+          Connect with Sai Feed Equipment for machinery, plant solution,
+          automation, spare equipment and support requirements.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 lg:grid-cols-2">
+        {
+          teamMembers.map((person) => (
+            <article class="group overflow-hidden rounded-[2rem] border border-brand-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl">
+              <div class="grid sm:grid-cols-[13rem_1fr]">
+                <div class="relative flex min-h-60 items-center justify-center overflow-hidden bg-brand-navy p-8">
+                  <div class="absolute inset-0 opacity-30">
+                    <div class="absolute left-8 top-8 size-24 rounded-full bg-brand-green blur-2xl" />
+                    <div class="absolute bottom-6 right-6 size-28 rounded-full bg-brand-steel blur-2xl" />
+                  </div>
+
+                  <div class="relative flex size-28 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white">
+                    <Users className="size-11" />
+                  </div>
+                </div>
+
+                <div class="p-7">
+                  <p class="text-xs font-black uppercase tracking-[0.22em] text-brand-green">
+                    {person.role}
+                  </p>
+
+                  <h3 class="mt-3 text-3xl font-black text-brand-navy">
+                    {person.name}
+                  </h3>
+
+                  <p class="mt-4 text-sm leading-7 text-brand-muted">
+                    {person.description}
+                  </p>
+
+                  <div class="mt-6 grid gap-3">
+                    {person.email && (
+                      <a
+                        href={`mailto:${person.email}`}
+                        class="group/link flex min-h-12 items-center gap-3 rounded-2xl bg-white px-4 text-sm font-bold text-brand-navy transition duration-300 hover:text-brand-green"
+                      >
+                        <Mail className="size-4 shrink-0 text-brand-green" />
+                        <span class="break-all">{person.email}</span>
+                      </a>
+                    )}
+
+                    {person.phone && (
+                      <a
+                        href={`tel:${person.phone.replaceAll("-", "").replaceAll(" ", "")}`}
+                        class="group/link flex min-h-12 items-center gap-3 rounded-2xl bg-white px-4 text-sm font-bold text-brand-navy transition duration-300 hover:text-brand-green"
+                      >
+                        <Phone className="size-4 shrink-0 text-brand-green" />
+                        <span>{person.phone}</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

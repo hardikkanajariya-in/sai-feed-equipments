@@ -1,0 +1,121 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionHeading from "@/components/site/SectionHeading.astro";
+import GalleryGrid from "@/components/site/GalleryGrid.astro";
+import CTASection from "@/components/site/CTASection.astro";
+import { galleryItems } from "@/data/gallery";
+import {
+  ArrowRight,
+  Camera,
+  Factory,
+  Images,
+  Layers,
+  Settings,
+} from "lucide-react";
+import PageHero from "@/components/site/PageHero.astro";
+
+const galleryStats = [
+  {
+    label: "Plant visuals",
+    value: "Feed plant",
+    icon: Factory,
+  },
+  {
+    label: "Equipment range",
+    value: "Machinery",
+    icon: Settings,
+  },
+  {
+    label: "Image sections",
+    value: "Gallery",
+    icon: Images,
+  },
+];
+
+const featuredItems = galleryItems.slice(0, 3);
+---
+
+<BaseLayout
+  title="Gallery"
+  description="Sai Feed Equipment gallery showing plant visuals, machinery, automation, material handling equipment, dies and rolls."
+>
+  <PageHero
+    eyebrow="Gallery"
+    title="Plant, machinery and equipment visuals"
+    description="Visual content for feed plant machinery, product images, plant setup images, automation, material handling equipment, dies and rolls."
+    image={featuredItems[0]?.image}
+    imageAlt={featuredItems[0]?.title ?? "Sai Feed Equipment gallery visual"}
+  />
+
+  <section class="bg-background py-14 sm:py-16">
+    <div class="container-page">
+      <div class="grid gap-4 md:grid-cols-3">
+        {
+          galleryStats.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div class="group rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl">
+                <div class="flex items-center gap-4">
+                  <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
+                    <Icon className="size-6" />
+                  </div>
+
+                  <div>
+                    <p class="text-xs font-black uppercase tracking-[0.2em] text-brand-muted">
+                      {item.label}
+                    </p>
+                    <p class="mt-1 text-xl font-black text-brand-navy">
+                      {item.value}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery-showcase" class="bg-brand-card py-16 sm:py-20 lg:py-24">
+    <div class="container-page">
+      <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <SectionHeading
+          eyebrow="Visual showcase"
+          title="Sai Feed Equipment gallery"
+          description="Images are grouped from plant, product, automation, dies and rolls, and material handling equipment sections."
+        />
+
+        <div
+          class="rounded-[2rem] border border-brand-border bg-white p-6 shadow-sm"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green"
+            >
+              <Layers className="size-6" />
+            </div>
+
+            <div>
+              <h2 class="text-xl font-black text-brand-navy">
+                Organized equipment visuals
+              </h2>
+              <p class="mt-2 text-sm leading-7 text-brand-muted">
+                Use this gallery to present plant installations, product-focused
+                machinery, control systems, material handling equipment and
+                spare components.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <GalleryGrid items={galleryItems} />
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>

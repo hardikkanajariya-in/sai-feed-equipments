@@ -1,0 +1,150 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/site/PageHero.astro";
+import SectionHeading from "@/components/site/SectionHeading.astro";
+import ProductCard from "@/components/site/ProductCard.astro";
+import CTASection from "@/components/site/CTASection.astro";
+import { products } from "@/data/products";
+import { ArrowRight, Factory, Layers, Plus, Settings, Sparkles } from "lucide-react";
+
+const featuredProducts = products.slice(0, 3);
+
+const productStats = [
+  {
+    label: "Product Range",
+    value: "Machinery",
+    icon: Factory,
+  },
+  {
+    label: "Plant Support",
+    value: "Equipment",
+    icon: Settings,
+  },
+  {
+    label: "Catalogue Scope",
+    value: "Spare Parts",
+    icon: Layers,
+  },
+];
+---
+
+<BaseLayout
+  title="Products"
+  description="Sai Feed Equipment product range including pellet mill, hammer mill, cooler, mixers, sieves, conveyors, automation, dies and rolls."
+>
+  <PageHero
+    eyebrow="Products"
+    title="Feed plant machinery and equipment range"
+    description="Explore Sai Feed Equipment machinery, automation, material handling equipment, dies and rolls for feed plant and pellet plant requirements."
+    image={featuredProducts[0]?.image}
+    imageAlt={featuredProducts[0]?.imageAlt ?? "Sai Feed Equipment product range"}
+  />
+
+  <section class="bg-background py-14 sm:py-16">
+    <div class="container-page">
+      <div class="grid gap-4 md:grid-cols-3">
+        {
+          productStats.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div class="group rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl">
+                <div class="flex items-center gap-4">
+                  <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
+                    <Icon className="size-6" />
+                  </div>
+
+                  <div>
+                    <p class="text-xs font-black uppercase tracking-[0.2em] text-brand-muted">
+                      {item.label}
+                    </p>
+                    <p class="mt-1 text-xl font-black text-brand-navy">
+                      {item.value}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-brand-card py-16 sm:py-20 lg:py-24">
+    <div class="container-page">
+      <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <SectionHeading
+          eyebrow="Product Range"
+          title="Machinery for feed and pellet production"
+          description="Browse product pages for machinery, process equipment, material handling systems, automation, dies and rolls."
+        />
+
+        <div class="rounded-[2rem] border border-brand-border bg-white p-6 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
+              <Factory className="size-6" />
+            </div>
+
+            <div>
+              <h2 class="text-xl font-black text-brand-navy">
+                Catalogue-based product pages
+              </h2>
+              <p class="mt-2 text-sm leading-7 text-brand-muted">
+                Each product page includes available catalogue features, applications,
+                specification field labels and related product references.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    products.map((product) => (
+      <ProductCard product={product} />
+    ))
+  }
+
+  <article class="group relative flex h-full min-h-[32rem] flex-col overflow-hidden rounded-[2rem] border border-dashed border-brand-green/45 bg-white/70 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:bg-white hover:shadow-xl">
+    <div class="absolute right-0 top-0 size-32 translate-x-10 -translate-y-10 rounded-full bg-brand-green/10 transition duration-300 group-hover:scale-125"></div>
+    <div class="absolute bottom-0 left-0 size-40 -translate-x-12 translate-y-12 rounded-full bg-brand-steel/10 transition duration-300 group-hover:scale-125"></div>
+
+    <div class="relative flex flex-1 flex-col justify-between">
+      <div>
+        <div class="flex aspect-[4/3] items-center justify-center rounded-[1.5rem] border border-brand-border bg-brand-green/5">
+          <div class="flex size-20 items-center justify-center rounded-[1.5rem] bg-brand-green/10 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
+            <Plus className="size-10" />
+          </div>
+        </div>
+
+        <p class="mt-6 text-sm font-black uppercase tracking-[0.22em] text-brand-green">
+          Coming Soon
+        </p>
+
+        <h3 class="mt-3 text-2xl font-black leading-tight text-brand-navy">
+          More equipment categories
+        </h3>
+
+        <p class="mt-4 text-sm leading-7 text-brand-muted">
+          Additional product categories can be added here when more catalogue content,
+          product photos or client-provided machinery details are available.
+        </p>
+      </div>
+
+      <div class="mt-8 inline-flex min-h-11 items-center text-sm font-black text-brand-green">
+        <Sparkles className="mr-2 size-4" />
+        Ready for expansion
+        <ArrowRight className="ml-2 size-4 transition duration-300 group-hover:translate-x-1" />
+      </div>
+    </div>
+  </article>
+</div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Send inquiry for product requirements"
+    description="Share machinery, spare equipment or plant requirement details through the inquiry page."
+  />
+</BaseLayout>

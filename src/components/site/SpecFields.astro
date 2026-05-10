@@ -1,0 +1,121 @@
+---
+import { FileText, Table2 } from "lucide-react";
+
+type SpecTable = {
+  title?: string;
+  columns: string[];
+  rows: string[][];
+};
+
+interface Props {
+  columns?: string[];
+  tables?: SpecTable[];
+}
+
+const { columns = [], tables = [] } = Astro.props;
+
+const hasTables = tables.length > 0;
+const hasColumns = columns.length > 0;
+---
+
+{
+  (hasTables || hasColumns) && (
+    <section class="rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm sm:p-7">
+      <div class="mb-7 flex items-start gap-4">
+        <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
+          <Table2 className="size-6" />
+        </div>
+
+        <div>
+          <p class="text-sm font-black uppercase tracking-[0.22em] text-brand-green">
+            Specifications
+          </p>
+          <h2 class="mt-2 text-2xl font-black text-brand-navy">
+            Technical specifications
+          </h2>
+        </div>
+      </div>
+
+      {
+        hasTables ? (
+          <div class="grid gap-8">
+            {
+              tables.map((table) => (
+                <div>
+                  {
+                    table.title && (
+                      <h3 class="mb-4 text-xl font-black text-brand-navy">
+                        {table.title}
+                      </h3>
+                    )
+                  }
+
+                  <div class="overflow-hidden rounded-2xl border border-brand-border bg-white shadow-sm">
+                    <div class="overflow-x-auto">
+                      <table class="w-full min-w-[48rem] border-collapse text-left text-sm">
+                        <thead class="bg-brand-navy text-white">
+                          <tr>
+                            {
+                              table.columns.map((column) => (
+                                <th class="whitespace-nowrap px-4 py-4 text-xs font-black uppercase tracking-[0.12em]">
+                                  {column}
+                                </th>
+                              ))
+                            }
+                          </tr>
+                        </thead>
+
+                        <tbody class="divide-y divide-brand-border">
+                          {
+                            table.rows.map((row) => (
+                              <tr class="transition duration-300 hover:bg-brand-green/5">
+                                {
+                                  row.map((cell) => (
+                                    <td class="whitespace-nowrap px-4 py-4 font-semibold text-brand-muted">
+                                      {cell}
+                                    </td>
+                                  ))
+                                }
+                              </tr>
+                            ))
+                          }
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        ) : (
+          <div>
+            <div class="mb-5 flex items-start gap-4">
+              <div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-brand-green/10 text-brand-green">
+                <FileText className="size-5" />
+              </div>
+
+              <div>
+                <h3 class="text-xl font-black text-brand-navy">
+                  Specification fields
+                </h3>
+                <p class="mt-2 text-sm leading-7 text-brand-muted">
+                  Available technical fields from the catalogue.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              {
+                columns.map((column) => (
+                  <span class="inline-flex min-h-11 items-center rounded-full border border-brand-border bg-white px-5 text-sm font-black text-brand-navy shadow-sm">
+                    {column}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+        )
+      }
+    </section>
+  )
+}

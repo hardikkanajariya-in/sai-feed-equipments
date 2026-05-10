@@ -1,0 +1,197 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionHeading from "@/components/site/SectionHeading.astro";
+import FeatureList from "@/components/site/FeatureList.astro";
+import ProductCard from "@/components/site/ProductCard.astro";
+import CTASection from "@/components/site/CTASection.astro";
+import { solutions, getSolution } from "@/data/solutions";
+import { getRelatedProducts } from "@/data/products";
+import {
+  ArrowRight,
+  BookOpenText,
+  Factory,
+  GalleryHorizontalEnd,
+  Layers,
+  ListChecks,
+  Settings,
+} from "lucide-react";
+import PageHero from "@/components/site/PageHero.astro";
+
+export function getStaticPaths() {
+  return solutions.map((solution) => ({ params: { slug: solution.slug } }));
+}
+
+const { slug } = Astro.params;
+const solution = getSolution(slug ?? "");
+
+if (!solution) {
+  return Astro.redirect("/");
+}
+
+const relatedProducts = getRelatedProducts(solution.relatedProducts);
+const mainOverview = solution.overview?.[0] ?? solution.summary;
+const secondaryOverview = solution.overview?.slice(1) ?? [];
+---
+
+<BaseLayout
+  title={solution.title}
+  description={solution.summary}
+  image={solution.image}
+>
+  <PageHero
+    eyebrow="Solution"
+    title={solution.title}
+    description={solution.summary}
+    image={solution.image}
+    imageAlt={solution.imageAlt}
+  />
+
+  <section class="bg-background py-16 sm:py-20 lg:py-24">
+    <div class="container-page">
+      <div class="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+        <div class="lg:sticky lg:top-28">
+          <SectionHeading
+            eyebrow="Overview"
+            title={`${solution.title} overview`}
+            description="A clean view of the solution scope, process support and plant application details."
+          />
+        </div>
+
+        <div>
+          <div
+            class="rounded-[2rem] border border-brand-border bg-card p-7 shadow-sm sm:p-8"
+          >
+            <div class="flex gap-4">
+              <div
+                class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green"
+              >
+                <BookOpenText className="size-6" />
+              </div>
+
+              <p class="text-lg leading-9 text-brand-muted">
+                {mainOverview}
+              </p>
+            </div>
+          </div>
+
+          {
+            secondaryOverview.length > 0 && (
+              <div class="mt-6 space-y-5 text-base leading-8 text-brand-muted">
+                {secondaryOverview.map((paragraph) => (
+                  <p class="border-l-4 border-brand-green pl-5">{paragraph}</p>
+                ))}
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-brand-card py-16 sm:py-20 lg:py-24">
+    <div class="container-page">
+      <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <SectionHeading
+          eyebrow="Details"
+          title="Catalogue sections"
+          description="Structured process and solution details prepared from the catalogue content."
+        />
+
+        <div
+          class="rounded-[2rem] border border-brand-border bg-white p-6 shadow-sm"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green"
+            >
+              <ListChecks className="size-6" />
+            </div>
+
+            <div>
+              <h2 class="text-xl font-black text-brand-navy">
+                Solution detail breakdown
+              </h2>
+              <p class="mt-2 text-sm leading-7 text-brand-muted">
+                Each section below presents the relevant process, benefit or
+                plant requirement points.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        {
+          solution.sections.map((section, index) => (
+            <article class="group relative overflow-hidden rounded-[2rem] border border-brand-border bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl">
+              <div class="absolute right-0 top-0 size-28 translate-x-8 -translate-y-8 rounded-full bg-brand-green/10 transition duration-300 group-hover:scale-125" />
+
+              <div class="relative flex items-start gap-4">
+                <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
+                  <span class="text-sm font-black">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+
+                <div>
+                  <h2 class="text-2xl font-black text-brand-navy">
+                    {section.title}
+                  </h2>
+
+                  <div class="mt-5">
+                    <FeatureList items={section.items} columns={1} />
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  {
+    relatedProducts.length > 0 && (
+      <section class="bg-background py-16 sm:py-20 lg:py-24">
+        <div class="container-page">
+          <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <SectionHeading
+              eyebrow="Related"
+              title="Related product range"
+              description="Machinery and equipment references connected with this solution category."
+            />
+
+            <div class="rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm">
+              <div class="flex items-start gap-4">
+                <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
+                  <Settings className="size-6" />
+                </div>
+
+                <div>
+                  <h2 class="text-xl font-black text-brand-navy">
+                    Machinery connections
+                  </h2>
+                  <p class="mt-2 text-sm leading-7 text-brand-muted">
+                    Review relevant product pages for equipment details and
+                    inquiry support.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedProducts.slice(0, 6).map((product) => (
+              <ProductCard product={product} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <CTASection
+    title={`Send inquiry for ${solution.title}`}
+    description="Share plant capacity, raw material, process or machinery requirement through the inquiry page."
+  />
+</BaseLayout>
