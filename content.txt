@@ -1,0 +1,497 @@
+SAI FEED EQUIPMENT - CATALOGUE EXTRACTED TEXT
+Source PDF: Sfe Catlouge (5)_compressed.pdf
+Note: This text was extracted from a mostly image-based brochure using OCR/manual cleanup. Please verify exact technical specification table values against the PDF images before publishing.
+
+======================================================================
+PAGE 1 - COVER
+======================================================================
+Sai Feed Equipment
+Advanced Solution For Feed Market
+
+Manufactures of:
+- Feeds Plants & Spare Equipment
+- Poultry Feeds
+- Cattle Feeds & Fish Feeds
+- Bio-Mass
+
+Email: vikram@saifeed.com
+Mobile: +91-7878401139, +91-9662739693
+Website: www.saifeed.com
+
+======================================================================
+PAGE 2 - ANIMAL FEED PLANT
+======================================================================
+Title: Animal - Feed Plant
+
+Intake system includes:
+- Single / multi dumping hopper for bulk as well as manual unloading of feed ingredients.
+- Magnetic grill to prevent ferrous/ferrite particles entering into the feed system.
+- Aspiration - pulse jet self-cleaning bag filters are used for dust-free environment.
+
+Weighing & Auto batching system:
+- Corrugated and round bins for holding individual ingredients.
+- Single bin capacity up to 40 m3.
+- Individual variable pitch screw feeders / bin dischargers with weigh hopper scales for exact weighing of all ingredients.
+- As per the recipe, feed ingredients are weighed individually in exact quantities and in the shortest possible time.
+- Premixing of feed ingredients prior to grinding is offered to ensure optimum grinding performance.
+
+Premix:
+- Full stainless steel mirror-polished round storage bins.
+- Variable pitch screw dischargers and weighing units are used for micro weighing to the accuracy of +/- 1%.
+
+Oil / fat dosing:
+- Load cell based fully automatic oil dosing system ensures accurate and reliable spraying of oil/fat.
+- Homogeneous fat addition as per feed recipe.
+
+======================================================================
+PAGE 3 - ANIMAL FEED PLANT PROCESS + BIOMASS / WOOD PLANT
+======================================================================
+Animal Feed Plant process sections:
+
+Grinding:
+- 1500/3000 rpm grinders in various screen areas.
+- Low/medium hammer-to-screen clearances for efficient grinding.
+- Fully integrated aspiration bag filters with plenum chambers are used for efficient grinding, reduced temperature rise, and clean screen holes.
+- Air filtration helps keep the feed plant clean and hygienic.
+
+Mixing:
+- Ribbon mixer is used for gentle dry mixing for Cv < 5.
+- Paddle mixer is used for fast and vigorous dry mixing with good amount of liquid addition.
+- Molasses mixer / continuous mixer for homogeneous mixing of molasses.
+- Robust and sturdy paddles for lump-free and homogeneous mixing.
+
+Pelleting:
+- Robustly engineered steel housing in welded construction for vibration-less operation.
+- Rotor assembly comprising of main drive pulley and die holder.
+- Stainless steel door and spout for long life.
+- Die speed can be adapted to suit the particular properties of the material to be pelletized.
+- Large die area for less motor load.
+
+Cooling:
+- Air versus pellets counter-flow enables pellets to be cooled gradually, minimizing the risk of cooling shock.
+- Steady discharge system ensures minimization of fine occurrences.
+- Compact design with less floor space.
+- Full stainless steel design.
+
+Crumbling:
+- Rolls are grooved with different flutes (TPI) to suit product sizing.
+- Differential rotational speed of rolls for perfect crumbling.
+- Rotary feeder for even distribution of pellets along the length of rolls.
+- Low noise and easy maintenance.
+
+Screening:
+- As product travels and encounters the screening surface, the vibrating screen throws product across the screen and separates the required size.
+- Screening system provides fast and efficient size separation with proper residence time to eliminate powder from the feed.
+
+Auto Bagging:
+- Animal feed in 25-100 kg bags can be auto weighed and stitched for dispatches.
+
+Biomass / Wood Plant:
+Sai Feed Equipment provides a complete solution for production, from grinding biomass/wood to manufacturing the best quality pellets.
+
+The use of biomass energy over fossil fuels leads to reduction in carbon emission in the environment. Planet Earth is protected from hazards of global warming by the use of renewable sources of energy.
+
+Raw materials for biomass pellets include:
+- Wood, saw dust and wood chips
+- Agri waste - groundnut shells, stalks, corn cob, etc.
+- Straw, bagasse, etc.
+
+Advantages of biomass / wood pelleting:
+- Reduced transportation cost
+- Environment friendly
+- Better storage and handling capability
+- Homogeneity for efficient burning
+- CO2 neutral fuel
+
+======================================================================
+PAGE 4 - PELLET PLANTS
+======================================================================
+Title: Pellet Plants
+
+Pelleting plant:
+- Animal feed plants: capacity 150-800 TPD
+- Biomass / wood pellet plant: capacity 30-150 TPD
+
+Sai Feed Equipment provides complete feed plant solutions for the feed industry. Since 1997, this has helped gain extensive knowledge and insight into the demands of specific feed markets.
+
+The company strives to provide tailor-made complete solutions in pelleting with efficient plants that are easy to operate and low on maintenance.
+
+Computer based automation and process monitoring systems control feed formulation as per the recipe, providing reassurance of high quality to feed millers and subsequently to end consumers. Plants are designed for complete feed safety and traceability.
+
+Sai Feed Equipment guarantees highly reliable process operations through 24x7 remote support facility as well as on-site support when necessary.
+
+======================================================================
+PAGE 5 - PELLET MILL
+======================================================================
+Title: Pellet Mill
+
+Features:
+- Robustly engineered steel housing in welded construction for vibration-less operation.
+- Rotor assembly comprising of main drive pulley and die holder.
+- Stainless steel door and spout for long life.
+- Die speed can be adapted to suit the particular properties of the material to be pelletized.
+- Robust knife cutter assembly - scale type for easy cutting and precise depth adjustment.
+- Centralised lubrication for nonstop performance.
+- Space-saving compact double rotor conditioner / differential diameter conditioner with adjustable paddles for highly reliable steam mixing and retention time.
+- Pellet mill for wood / biomass equipped with a forced feeder for difficult-to-flow materials.
+- Gear type roll assembly for precise die-roll gap adjustment.
+- H-CHROME and H-CARB die for high finish gelatinized pellets.
+
+Applications:
+- Municipal waste / organic waste
+- Poultry manure
+- Rice bran
+- Alfa-Alfa
+- Red chilli
+- Bio-fuel
+- Research institutions conducting experiments of life-saving drugs on animals
+
+Specification table columns shown in brochure:
+- Model
+- Die ID (mm)
+- Track width (mm)
+- Tip Speed (m/sec)
+- Motor Power (kW)
+- Die Area (cm2)
+
+Note: Verify the exact Pellet Mill table values from the PDF image before final website publication.
+
+======================================================================
+PAGE 6 - HAMMER MILL
+======================================================================
+Title: Hammer Mill
+
+Features:
+- 1500/3000 rpm grinders in various screen areas with low/medium hammer-to-screen clearances for efficient grinding.
+- Rotary feeder with magnetic separator and air control flap for equal distribution of grindables.
+- Grinding chamber is of water droplet shape for consistent evenly sized particles.
+- Window for fast removal of beater holding rod and quick acting clamps for fast changing of screens.
+- Rotor is dynamically balanced, resulting in low noise and trouble-free running.
+- Low temperature rise to preserve ingredient nutrients.
+- Counter hammers avoid bottom material build-up.
+- Fully integrated aspiration bag filters with plenum chambers are used for efficient grinding, reduced temperature rise, and cleaned screen holes.
+- Air filtration keeps the entire feed plant clean and hygienic.
+
+Specification table columns shown in brochure:
+- SFE Model
+- Motor Power (kW)
+- Surface area of screen (m2)
+- No. of Beaters
+- Capacity MT/Hr
+
+Note: Verify exact Hammer Mill table values from the PDF image before final website publication.
+
+======================================================================
+PAGE 7 - COOLER
+======================================================================
+Title: Cooler
+
+Features:
+- Stainless steel rotary air-lock feeder for uniform feeding / distribution of pellets in cooling chamber.
+- Air versus pellets counter-flow enables pellets to be cooled gradually, minimizing risk of cooling shock.
+- Sturdy grid discharge system ensures minimization of fine occurrences and high hygienic standards.
+- Automatic gate discharge closure in the event of power failure to avoid spillage of pellet feed.
+- Adjustable hi-low level proximity sensor for required fill level of pellets in cooling chamber.
+- Easy access doors for maintenance and cleaning of cooling chamber.
+- Full stainless steel compact design with less floor space occupied.
+
+Specification table columns shown in brochure:
+- Model
+- Capacity (MT/Hr)
+- Motor Power (kW)
+- Cooler + Vene Feeder
+
+Example model headings shown: 12x12, 12x14, 15x17, 18x18, 18x20, 20x22, 20x25.
+
+Note: Verify exact Cooler table values from the PDF image before final website publication.
+
+======================================================================
+PAGE 8 - RIBBON MIXER
+======================================================================
+Title: Ribbon Mixer
+
+Features:
+- Double ribbon mixer is used for gentle dry mixing with low liquid addition for Cv < 5.
+- Mixing chamber design with optimal rotor helps mix light and heavy particles evenly.
+- Sturdy rotor bearing housing with rotor-mixer body gap adjustment helps avoid dead corners in the mixer body.
+- Return air chute furnished for internal and external pressure balancing.
+- Pneumatically operated bomb door gate for complete discharge.
+- Large doors enable easy cleanout and inspection.
+- Multiple spraying nozzles section is optional.
+
+Liquid addition:
+- Liquid like oil/fat can be added in the mixer by mass flow controller.
+- Loss-in-weight PLC controlled oil dosing system can add exact quantity.
+
+Specification table columns shown in brochure:
+- Model
+- Vol. (Ltr.)
+- Motor (kW)
+- No. of Rotor
+- Mixing Time
+
+Note: Verify exact Ribbon Mixer table values from the PDF image before final website publication.
+
+======================================================================
+PAGE 9 - PADDLE MIXER
+======================================================================
+Title: Paddle Mixer
+
+Features:
+- Paddle mixer is used for fast and vigorous dry mixing with good amount of liquid addition.
+- Specially arranged welded paddles with lead angles for vigorous lump-free homogeneous mixing.
+- Optimal double rotor structure for even fill of the mixer with no dead corner.
+- Pneumatically operated double bomb door gate for complete discharge.
+- Return air chute furnished for internal and external pressure balancing.
+- Multiple spraying nozzles section for liquid addition up to max. 8-10% is optional.
+- Large doors enable easy cleanout and inspection.
+- Full body stainless steel construction including rotor is optional.
+
+Liquid addition:
+- Liquid like oil/fat can be added in the mixer by mass flow controller.
+- Loss-in-weight PLC controlled oil dosing system can add exact quantity.
+
+Specification table columns shown in brochure:
+- Model
+- Vol. (Ltr.)
+- Motor (kW)
+- No. of Rotor
+- Mixing Time
+
+Note: Verify exact Paddle Mixer table values from the PDF image before final website publication.
+
+======================================================================
+PAGE 10 - CRUMBER
+======================================================================
+Title: Crumber
+
+Features:
+- Crumbler rolls are grooved with different flutes (TPI) to suit product sizing.
+- Differential rotational speed of rolls for perfect crumbling.
+- Rotary feeder for even distribution of pellets along the length of rolls.
+- Sturdy and robust drive for slip-free crumbling.
+- Large roll cleaning / inspection door for ease of maintenance.
+- Pressure-cast chilled roll with desired TPI.
+- Precise spring-loaded geared roll-gap adjustment.
+- Low noise and negligible maintenance.
+- Feed diverter flap for bypassing pellets.
+
+Specification table columns shown in brochure:
+- Model
+- Roller Size
+- Capacity (MT/Hr)
+- Motor Power (kW)
+
+Example model headings shown: 15x80, 20x80, 20x100, 20x120, 20x150, 25x150.
+
+Note: Multiple crumblers can be placed in parallel or series for higher capacities or fine crumbling. Verify exact table values from PDF image before publication.
+
+======================================================================
+PAGE 11 - VIBRO SIEVE AND GYRO SIEVE
+======================================================================
+Title: Vibro Sieve
+
+Vibro Sieve features:
+- Single sturdy eccentric throw mechanism with standard motor.
+- Tubular frame for vibration-free installation.
+- Long screen travel provides fast, efficient size separation with adequate residence time to eliminate powder from feed.
+- Quick clamp makes screen changing very fast.
+- Single as well as multi-deck sieve for grading different sizes of crumbs/pellets.
+- As the product travels and encounters the screening surface, the vibrating screen throws product across the screen and separates the required size.
+- Low power requirement with high processing rate.
+
+Specification table columns shown in brochure:
+- Model
+- Sieve Area (m2)
+- Motor Power (kW)
+- Capacity (MT/Hr)
+
+Example model headings shown: 70x150, 100x200, 120x250, 150x300.
+
+Title: Gyro Sieve
+
+Gyro Sieve features:
+- Heavy duty unbalanced weight electric motor for various spiral-screening patterns.
+- Self-balancing gyratory screen producing three-plane motion.
+- Frame with heavy duty vibration dampening springs.
+- Single as well as multi-deck sieve for grading different sizes of crumbs/pellets.
+- High screening efficiency with accurate separation and minimum screen blinding.
+- Modular design for varied range of applications.
+
+Specification table columns shown in brochure:
+- Model
+- Sieve Area (m2)
+- Motor Power (kW)
+- Capacity (MT/Hr)
+
+Note: Verify exact Vibro Sieve and Gyro Sieve table values from the PDF image before publication.
+
+======================================================================
+PAGE 12 - MATERIAL HANDLING EQUIPMENTS
+======================================================================
+Title: Material Handling Equipments
+
+Overview:
+Design and selection of conveying equipments plays a great role in improving overall performance of feed plants. Sai Feed Equipment has the design expertise to ensure accurate placement for continuous feed and discharge of material at different stages like grinding, mixing, pelleting and bagging. All conveying equipments are energy efficient to assure minimum power consumption and long service life.
+
+Chain Conveyor:
+- Rugged chain and sprocket assembly.
+- Power efficient design.
+- Full UHMW for friction-free sliding.
+
+Bucket Elevator:
+- Rubberised head pulley.
+- Bucket: steel / HDPE.
+
+Screw Conveyor:
+- Sturdy housing with accurate seal.
+- Rugged built long life.
+
+Specification tables shown in brochure include:
+- SFE Model
+- Trough Size (mm)
+- Capacity MT/Hr
+
+Note: Verify exact table values for Chain Conveyor, Bucket Elevator and Screw Conveyor from the PDF image before publication.
+
+======================================================================
+PAGE 13 - PLANT AUTOMATION
+======================================================================
+Title: Plant Automation
+Subtitle: Computer Based Automation & Process Monitoring System
+
+Content:
+Sai Feed Equipment feed plant technology enables customers to create their own unique recipes, controlled homogeneous content and exact physical properties.
+
+The feed plant is monitored / controlled by computer based automation and process monitoring system with the help of various safety and operational hardwired interlocks to make the feed plant safe, efficient and smooth running.
+
+The feed plant requires a variety of ingredients and, as per recipe, the ingredients are weighed and mixed in exact quantities.
+
+After entering the feed recipe into the advanced process control system, the complete feed process from intake to bagging is on-screen. The continuous data logging system ensures product traceability at every stage.
+
+Various reports are generated like batch report, lot report, recipe code daily/hourly production report, which ensures complete product traceability.
+
+A dedicated online office support team provides plant support through remote login.
+
+Remote support overcomes limitations of large distance.
+
+======================================================================
+PAGE 14 - DIES & ROLLS
+======================================================================
+Title: Dies & Rolls
+Brands/Terms: H-CHROME, H-CARB
+
+Overview:
+Design and selection of dies and rolls plays an important role in improving feed plant performance. Sai Feed Equipment has design expertise for accurate placement and reliable operation in grinding, mixing, pelleting and bagging systems. Equipment is energy efficient to assure minimum power consumption and long service life.
+
+Forging:
+- Ring forging of martensitic stainless steel and alloy steel are procured from world-class ring rolling mills.
+- These mills have fully accredited internal QAP systems to manufacture rings strictly as per specification.
+
+Turning:
+- Dies are machined as per pellet mill specific dimensional tolerances on CNC turning centers.
+- This helps ensure customers do not face fitment issues.
+
+CNC Gun-Drilling:
+- High mirror finish concentric holes ensure high productivity.
+- Low power consumption.
+- More durability and high quality pellets.
+
+Outer Relief Holes:
+- CNC step-drilling machine is used.
+- Repetitive depth accuracy is maintained in every hole of the die.
+
+Inverted Countersink:
+- Accurate inverted counter is done by CNC operated machines for easy material entry.
+- Enhances pelleting performance.
+- Entry angle is adjusted for correct flow with respect to pellet PDI.
+
+======================================================================
+PAGE 15 - H-CHROME AND H-CARB DIES / CARB ROLL / PACKAGING
+======================================================================
+H-CHROME and H-CARB Dies guarantee:
+- Higher production.
+- Increased rate of production per hour.
+- Substantial reduction in power cost.
+- Unaffected by steam, molasses and other fat contents.
+- Easy pelleting right from the start.
+- Minimizing maintenance time.
+- Negligible hole enlargements.
+
+Die hole range:
+- Complete range includes dies of holes as small as 1.2 mm and up to 12 mm.
+
+Vacuum Hardening:
+- State-of-the-art vacuum hardening bottom loading furnace with high pressure quenching.
+- Results in perfectly hardened D-Chrome dies with minimal ovality.
+
+CARB Roll:
+- Corrugated rolls - close/open end.
+- Dimple rolls.
+- Helical fluted rolls.
+- Pinnacle close end rolls.
+- CARB rolls are hardened to 60-62 HRC to provide long service life.
+- Compatible with all types of pellet diets.
+
+Packaging:
+- Proper care is taken in packaging depending on the mode of transportation and final destination.
+
+======================================================================
+PAGE 16 - CONTACT / BACK COVER
+======================================================================
+Sai Feed Equipment
+
+Address:
+B-10, Vinayak Estate, Sathrota Road,
+Halol - 389350,
+Dist. Panchmahal
+
+Email:
+vikram@saifeed.com
+
+Website:
+www.saifeed.com
+
+Phone:
++91-7878401139
++91-9662739693
+
+Tagline:
+Empowering Feeds Manufacturers And Distributors To Compete In A Global And Virtual Market Place
+
+Footer message:
+Deliver on-time is our prime objective.
+Quality pelleting plant is our focus.
+Customer's feedback is our inspiration.
+
+======================================================================
+WEBSITE DATA SUMMARY
+======================================================================
+Suggested solution slugs:
+- animal-feed-plant
+- biomass-wood-plant
+- pellet-plants
+
+Suggested product slugs:
+- pellet-mill
+- hammer-mill
+- cooler
+- ribbon-mixer
+- paddle-mixer
+- crumbler
+- vibro-sieve
+- gyro-sieve
+- material-handling-equipment
+- plant-automation
+- dies-and-rolls
+
+Recommended brand colors from brochure:
+- Deep Brand Navy: #031A20
+- Industrial Green: #00A651
+- Dark Green: #007A3D
+- Soft Cream: #F7F3D6
+- Warm Off White: #FFFCF2
+- Steel Blue Accent: #1E5A78
+- Charcoal Text: #1F2933
+- Muted Text: #6B7280
+- Border Color: #D8D8C2

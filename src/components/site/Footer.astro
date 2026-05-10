@@ -1,0 +1,107 @@
+---
+const year = new Date().getFullYear();
+
+const productLinks = [
+  { label: "Pellet Mill", href: "/products/pellet-mill" },
+  { label: "Hammer Mill", href: "/products/hammer-mill" },
+  { label: "Ribbon Mixer", href: "/products/ribbon-mixer" },
+  { label: "Plant Automation", href: "/products/plant-automation" },
+];
+
+const solutionLinks = [
+  { label: "Animal Feed Plant", href: "/solutions/animal-feed-plant" },
+  { label: "Biomass / Wood Plant", href: "/solutions/biomass-wood-plant" },
+  { label: "Pellet Plants", href: "/solutions/pellet-plants" },
+];
+---
+
+<footer class="bg-brand-navy text-white">
+  <div class="container-page grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-4">
+    <div class="lg:col-span-1">
+      <a href="/" class="flex items-center gap-3">
+        <span
+          class="flex size-11 items-center justify-center rounded-full bg-brand-green text-sm font-black text-white"
+        >
+          SFE
+        </span>
+
+        <span>
+          <span class="block text-base font-black">Sai Feed Equipment</span>
+          <span class="block text-xs text-white/60">Industrial Machinery Solutions</span>
+        </span>
+      </a>
+
+      <p class="mt-5 max-w-sm text-sm leading-7 text-white/65">
+        Feed plant machinery, pellet plants, biomass solutions, automation, material handling,
+        dies and rolls for industrial production requirements.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-black uppercase tracking-[0.2em] text-white/80">
+        Products
+      </h3>
+
+      <div class="mt-5 grid gap-3 text-sm text-white/65">
+        {
+          productLinks.map((item) => (
+            <a href={item.href} class="transition hover:text-white">
+              {item.label}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-black uppercase tracking-[0.2em] text-white/80">
+        Solutions
+      </h3>
+
+      <div class="mt-5 grid gap-3 text-sm text-white/65">
+        {
+          solutionLinks.map((item) => (
+            <a href={item.href} class="transition hover:text-white">
+              {item.label}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-black uppercase tracking-[0.2em] text-white/80">
+        Contact
+      </h3>
+
+      <div class="mt-5 grid gap-3 text-sm text-white/65">
+        <a href="tel:" class="transition hover:text-white">Call Sai Feed Equipment</a>
+        <a href="mailto:" class="transition hover:text-white">Email Inquiry</a>
+        <a
+          href="https://www.saifeed.com"
+          target="_blank"
+          rel="noreferrer"
+          class="transition hover:text-white"
+        >
+          www.saifeed.com
+        </a>
+      </div>
+
+      <a
+        href="/contact"
+        class="mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-brand-green px-5 text-sm font-bold text-white transition hover:bg-brand-green-dark"
+      >
+        Send Inquiry
+      </a>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div
+      class="container-page flex flex-col gap-3 py-5 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between"
+    >
+      <p>© {year} Sai Feed Equipment. All rights reserved.</p>
+      <p>Static business website for industrial machinery solutions.</p>
+    </div>
+  </div>
+</footer>
