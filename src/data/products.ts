@@ -254,7 +254,7 @@ export const products: Product[] = [
   {
     title: "Vibro Sieve",
     slug: "vibro-sieve",
-    image: "/images/products/vibro-sieve.png",
+    image: "/images/products/bibro-sieve.png",
     imageAlt: "Vibro Sieve machinery by Sai Feed Equipment",
     summary:
       "Vibro sieve equipment with eccentric throw mechanism, tubular frame, quick clamp and multi-deck grading support.",

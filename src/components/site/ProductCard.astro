@@ -1,6 +1,7 @@
 ---
 import type { Product } from "@/data/products";
-import { ArrowRight, Settings, Image as ImageIcon } from "lucide-react";
+import { ArrowRight, Settings } from "lucide-react";
+import OptimizedPicture from "@/components/site/OptimizedPicture.astro";
 
 interface Props {
   product: Product;
@@ -16,13 +17,13 @@ const { product } = Astro.props;
   <div class="relative aspect-[4/3] overflow-hidden bg-white">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(0,166,81,0.10),transparent_45%)]"></div>
 
-    <img
+    <OptimizedPicture
       src={product.image}
       alt={product.imageAlt}
-      width="640"
-      height="480"
+      width={640}
+      height={480}
       loading="lazy"
-      decoding="async"
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
       class="relative h-full w-full object-contain p-5 transition duration-700 group-hover:scale-105"
     />
 

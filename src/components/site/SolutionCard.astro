@@ -1,6 +1,7 @@
 ---
 import type { Solution } from "@/data/solutions";
 import { ArrowRight, Factory, Layers } from "lucide-react";
+import OptimizedPicture from "@/components/site/OptimizedPicture.astro";
 
 interface Props {
   solution: Solution;
@@ -14,13 +15,13 @@ const { solution } = Astro.props;
   class="group relative grid h-full overflow-hidden rounded-[2rem] border border-brand-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl"
 >
   <div class="relative aspect-[16/10] overflow-hidden bg-white">
-    <img
+    <OptimizedPicture
       src={solution.image}
       alt={solution.imageAlt}
-      width="900"
-      height="560"
+      width={900}
+      height={560}
       loading="lazy"
-      decoding="async"
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
       class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
     />
 

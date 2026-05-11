@@ -4,6 +4,7 @@ import SectionHeading from "@/components/site/SectionHeading.astro";
 import ProductCard from "@/components/site/ProductCard.astro";
 import SolutionCard from "@/components/site/SolutionCard.astro";
 import CTASection from "@/components/site/CTASection.astro";
+import OptimizedPicture from "@/components/site/OptimizedPicture.astro";
 import { products } from "@/data/products";
 import { solutions } from "@/data/solutions";
 import { site } from "@/data/site";
@@ -73,11 +74,14 @@ const featuredProducts = products.slice(0, 6);
         class="rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl backdrop-blur"
       >
         <div class="overflow-hidden rounded-[1.5rem] bg-brand-card">
-          <img
+          <OptimizedPicture
             src="/images/solutions/animal-feed-plant.png"
             alt="Feed plant interior"
-            width="900"
-            height="675"
+            width={900}
+            height={675}
+            loading="eager"
+            fetchpriority="high"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             class="aspect-[4/3] h-full w-full object-cover"
           />
         </div>
@@ -141,12 +145,13 @@ const featuredProducts = products.slice(0, 6);
       <div
         class="overflow-hidden rounded-3xl border border-brand-border bg-white shadow-sm"
       >
-        <img
+        <OptimizedPicture
           src="/images/products/plant-automation.png"
           alt="Plant automation"
-          width="900"
-          height="675"
+          width={900}
+          height={675}
           loading="lazy"
+          sizes="(max-width: 1024px) 100vw, 50vw"
           class="aspect-[4/3] h-full w-full object-cover"
         />
       </div>
