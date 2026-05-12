@@ -25,7 +25,9 @@ const featuredProducts = products.slice(0, 6);
   title="Advanced Solution For Feed Market"
   description={site.description}
 >
-  <section class="relative overflow-hidden bg-brand-navy text-white">
+  <section
+    class="section-shell section-shell--dark relative overflow-hidden bg-brand-navy text-white"
+  >
     <div class="absolute inset-0 opacity-30">
       <div
         class="absolute -left-20 top-16 size-80 rounded-full bg-brand-green blur-3xl"
@@ -44,7 +46,7 @@ const featuredProducts = products.slice(0, 6);
     <div
       class="container-page relative grid min-h-[calc(100svh-4rem)] items-center gap-12 py-16 lg:grid-cols-[1.02fr_0.98fr] lg:py-20"
     >
-      <div>
+      <div data-reveal="left">
         <p
           class="mb-5 inline-flex rounded-full border border-brand-green/40 bg-brand-green/10 px-4 py-2 text-sm font-bold text-brand-green"
         >
@@ -58,12 +60,19 @@ const featuredProducts = products.slice(0, 6);
         <p class="mt-6 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
           {site.description}
         </p>
-
-        <div class="mt-10 grid max-w-2xl gap-3 sm:grid-cols-2">
+        <div class="mt-10 grid max-w-2xl gap-3 sm:grid-cols-2" data-stagger>
           {
             site.manufactures.map((item) => (
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm font-semibold text-white/75 backdrop-blur">
-                {item}
+              <div class="surface-card-dark group relative overflow-hidden rounded-2xl p-4 text-sm font-semibold text-white/75 transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:text-white hover:shadow-2xl hover:shadow-primary/20">
+                <div class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                  <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent" />
+                  <div class="absolute -right-10 -top-10 h-24 w-24 rounded-full bg-primary/20 blur-2xl transition-transform duration-700 group-hover:scale-150" />
+                </div>
+
+                <span class="relative z-10 inline-flex items-center gap-2">
+                  <span class="h-1.5 w-1.5 rounded-full bg-primary opacity-60 transition-all duration-500 group-hover:opacity-100 group-hover:shadow-[0_0_12px_currentColor]" />
+                  {item}
+                </span>
               </div>
             ))
           }
@@ -71,7 +80,9 @@ const featuredProducts = products.slice(0, 6);
       </div>
 
       <div
-        class="rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl backdrop-blur"
+        class="surface-card-dark interactive-panel float-soft rounded-[2rem] p-3"
+        data-reveal="right"
+        data-tilt
       >
         <div class="overflow-hidden rounded-[1.5rem] bg-brand-card">
           <OptimizedPicture
@@ -89,20 +100,20 @@ const featuredProducts = products.slice(0, 6);
     </div>
   </section>
 
-  <section class="bg-background py-16 sm:py-20">
+  <section class="section-shell bg-background py-16 sm:py-20">
     <div class="container-page">
       <SectionHeading
         eyebrow="Solutions"
         title="Plant solutions from intake to dispatch"
         description="Sai Feed Equipment presents feed plant, biomass / wood plant and pellet plant solutions with machinery, automation and process support."
       />
-      <div class="mt-10 grid gap-5 lg:grid-cols-3">
+      <div class="mt-10 grid gap-5 lg:grid-cols-3" data-stagger>
         {solutions.map((solution) => <SolutionCard solution={solution} />)}
       </div>
     </div>
   </section>
 
-  <section class="bg-background py-16 sm:py-20">
+  <section class="section-shell bg-background py-16 sm:py-20">
     <div class="container-page">
       <div
         class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between"
@@ -113,17 +124,17 @@ const featuredProducts = products.slice(0, 6);
           description="Initial product range based on the Sai Feed Equipment catalogue."
         />
       </div>
-      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
         {featuredProducts.map((product) => <ProductCard product={product} />)}
       </div>
     </div>
   </section>
 
-  <section class="bg-brand-card py-16 sm:py-20">
+  <section class="section-shell bg-brand-card py-16 sm:py-20">
     <div
       class="container-page grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"
     >
-      <div>
+      <div data-reveal="left">
         <SectionHeading
           eyebrow="Automation"
           title="Recipe control and process monitoring"
@@ -143,7 +154,9 @@ const featuredProducts = products.slice(0, 6);
         </div>
       </div>
       <div
-        class="overflow-hidden rounded-3xl border border-brand-border bg-white shadow-sm"
+        class="surface-card interactive-panel overflow-hidden rounded-3xl"
+        data-reveal="right"
+        data-tilt
       >
         <OptimizedPicture
           src="/images/products/plant-automation.png"

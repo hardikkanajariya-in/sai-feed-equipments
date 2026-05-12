@@ -20,30 +20,31 @@ const phoneHref = site.phones?.[0]
   : "/contact";
 ---
 
-<header class="sticky top-0 z-50 border-b border-white/10 bg-brand-navy/95 text-white shadow-lg shadow-black/10 backdrop-blur-xl">
+<header class="sticky top-0 z-50 border-b border-white/10 bg-brand-navy/88 text-white shadow-lg shadow-black/10 backdrop-blur-xl">
   <div class="container-page flex min-h-[4.75rem] items-center justify-between gap-4">
     <!-- Logo -->
     <a
       href="/"
       class="group flex min-h-14 items-center"
       aria-label="Sai Feed Equipment Home"
+      data-reveal="left"
     >
-      <img
-        src="/images/logo.png"
-        alt="Sai Feed Equipment"
-        width="160"
-        height="78"
-        class="h-12 w-auto object-contain transition duration-300 group-hover:scale-[1.04] sm:h-14"
-      />
+      <span class="logo-badge px-3 py-2 transition duration-300 group-hover:-translate-y-0.5 group-hover:shadow-xl">
+        <img
+          src="/images/logo.svg"
+          alt="Sai Feed Equipment"
+          class="h-11 w-auto object-contain transition duration-300 scale-[2.5] group-hover:scale-[2.5] sm:h-12"
+        />
+      </span>
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
+    <nav class="hidden items-center gap-1 lg:flex" aria-label="Main navigation" data-reveal>
       {
         mainNav.map((item) => (
           <a
             href={item.href}
-            class="group relative inline-flex min-h-11 items-center rounded-full px-4 text-sm font-semibold text-white/75 transition duration-300 hover:bg-white/10 hover:text-white"
+            class="group relative inline-flex min-h-11 items-center rounded-full px-4 text-sm font-semibold text-white/75 transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:text-white"
           >
             <span>{item.label}</span>
             <span class="absolute bottom-2 left-4 h-0.5 w-0 rounded-full bg-brand-green transition-all duration-300 group-hover:w-[calc(100%-2rem)]" />
@@ -55,7 +56,7 @@ const phoneHref = site.phones?.[0]
       <div class="group relative">
         <a
           href="/products"
-          class="relative inline-flex min-h-11 items-center gap-2 rounded-full px-4 text-sm font-semibold text-white/75 transition duration-300 hover:bg-white/10 hover:text-white"
+          class="relative inline-flex min-h-11 items-center gap-2 rounded-full px-4 text-sm font-semibold text-white/75 transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:text-white"
         >
           <span>Products</span>
           <ChevronDown className="size-3.5 transition duration-300 group-hover:rotate-180" />
@@ -110,7 +111,7 @@ const phoneHref = site.phones?.[0]
       <div class="group relative">
         <a
           href="/solutions"
-          class="relative inline-flex min-h-11 items-center gap-2 rounded-full px-4 text-sm font-semibold text-white/75 transition duration-300 hover:bg-white/10 hover:text-white"
+          class="relative inline-flex min-h-11 items-center gap-2 rounded-full px-4 text-sm font-semibold text-white/75 transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:text-white"
         >
           <span>Solutions</span>
           <ChevronDown className="size-3.5 transition duration-300 group-hover:rotate-180" />
@@ -163,7 +164,7 @@ const phoneHref = site.phones?.[0]
     </nav>
 
     <!-- Desktop Actions -->
-    <div class="hidden items-center gap-3 lg:flex">
+    <div class="hidden items-center gap-3 lg:flex" data-reveal="right">
       <a
         href={phoneHref}
         class="group inline-flex min-h-11 items-center justify-center gap-2 overflow-hidden rounded-full border border-white/15 px-5 text-sm font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10"
@@ -182,7 +183,7 @@ const phoneHref = site.phones?.[0]
     </div>
 
     <!-- Mobile Menu -->
-    <details class="group/mobile relative lg:hidden" data-mobile-dropdown>
+    <details class="group/mobile relative lg:hidden" data-mobile-dropdown data-reveal="right">
       <summary
         class="flex min-h-12 min-w-12 cursor-pointer list-none items-center justify-center rounded-2xl border border-white/15 text-white transition duration-300 hover:bg-white/10"
         aria-label="Open menu"

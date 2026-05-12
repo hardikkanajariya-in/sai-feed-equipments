@@ -7,7 +7,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Globe,
   Factory,
   Leaf,
 } from "lucide-react";
@@ -15,13 +14,9 @@ import {
 const year = new Date().getFullYear();
 
 const primaryProducts = products.slice(0, 7);
-
-const phoneHref = site.phones?.[0]
-  ? `tel:${site.phones[0].replaceAll("-", "").replaceAll(" ", "")}`
-  : "/contact";
 ---
 
-<footer class="relative overflow-hidden bg-brand-navy text-white">
+<footer class="section-shell section-shell--dark relative overflow-hidden bg-brand-navy text-white">
   <div class="pointer-events-none absolute inset-0 opacity-25">
     <div class="absolute -left-32 top-10 size-80 rounded-full bg-brand-green blur-3xl"></div>
     <div class="absolute -right-32 bottom-0 size-96 rounded-full bg-brand-steel blur-3xl"></div>
@@ -33,25 +28,19 @@ const phoneHref = site.phones?.[0]
 
   <div class="container-page relative py-12 sm:py-14 lg:py-16">
     <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.25fr_0.8fr_0.8fr_1.15fr]">
-      <div>
+      <div data-reveal="left">
         <a href="/" class="group inline-flex items-center" aria-label="Sai Feed Equipment Home">
-          <img
-            src="/images/logo.png"
-            alt="Sai Feed Equipment"
-            width="170"
-            height="84"
-            class="h-16 w-auto rounded-xl bg-white/95 p-2 object-contain transition duration-300 group-hover:scale-[1.03]"
-          />
-        </a>
-
-        <p class="mt-6 max-w-sm text-sm leading-7 text-white/65">
+          <p class="mt-6 max-w-sm text-sm leading-7 text-dark-100">
           {site.backCoverTagline}
         </p>
+        </a>
+
+        
 
         <div class="mt-6 grid gap-3">
           {
             site.footerMessages.map((message) => (
-              <div class="flex gap-3 text-sm leading-6 text-white/65">
+              <div class="surface-card-dark flex gap-3 px-4 py-3 text-sm leading-6 text-white/68">
                 <Leaf className="mt-1 size-4 shrink-0 text-brand-green" />
                 <p>{message}</p>
               </div>
@@ -60,7 +49,7 @@ const phoneHref = site.phones?.[0]
         </div>
       </div>
 
-      <div>
+      <div data-reveal style="--reveal-delay: 90ms;">
         <h3 class="flex items-center gap-2 text-sm font-black uppercase tracking-[0.2em] text-white/85">
           <Factory className="size-4 text-brand-green" />
           Products
@@ -81,7 +70,7 @@ const phoneHref = site.phones?.[0]
         </div>
       </div>
 
-      <div>
+      <div data-reveal style="--reveal-delay: 180ms;">
         <h3 class="flex items-center gap-2 text-sm font-black uppercase tracking-[0.2em] text-white/85">
           <Leaf className="size-4 text-brand-green" />
           Solutions
@@ -118,7 +107,7 @@ const phoneHref = site.phones?.[0]
         </div>
       </div>
 
-      <div>
+      <div data-reveal="right" style="--reveal-delay: 270ms;">
         <h3 class="text-sm font-black uppercase tracking-[0.2em] text-white/85">
           Contact
         </h3>

@@ -47,15 +47,15 @@ const featuredItems = galleryItems.slice(0, 3);
     imageAlt={featuredItems[0]?.title ?? "Sai Feed Equipment gallery visual"}
   />
 
-  <section class="bg-background py-14 sm:py-16">
+  <section class="section-shell bg-background py-14 sm:py-16">
     <div class="container-page">
-      <div class="grid gap-4 md:grid-cols-3">
+      <div class="grid gap-4 md:grid-cols-3" data-stagger>
         {
           galleryStats.map((item) => {
             const Icon = item.icon;
 
             return (
-              <div class="group rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl">
+              <div class="surface-card interactive-panel group rounded-[2rem] p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl" data-tilt>
                 <div class="flex items-center gap-4">
                   <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
                     <Icon className="size-6" />
@@ -78,7 +78,7 @@ const featuredItems = galleryItems.slice(0, 3);
     </div>
   </section>
 
-  <section id="gallery-showcase" class="bg-brand-card py-16 sm:py-20 lg:py-24">
+  <section id="gallery-showcase" class="section-shell bg-brand-card py-16 sm:py-20 lg:py-24">
     <div class="container-page">
       <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
         <SectionHeading
@@ -88,7 +88,8 @@ const featuredItems = galleryItems.slice(0, 3);
         />
 
         <div
-          class="rounded-[2rem] border border-brand-border bg-white p-6 shadow-sm"
+          class="surface-card rounded-[2rem] p-6"
+          data-reveal="right"
         >
           <div class="flex items-start gap-4">
             <div

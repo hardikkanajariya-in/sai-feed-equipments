@@ -55,17 +55,17 @@ const hasRelatedProducts = relatedProducts.length > 0;
     imageAlt={product.imageAlt}
   />
 
-  <section class="bg-background py-16 sm:py-20 lg:py-24">
+  <section class="section-shell bg-background py-16 sm:py-20 lg:py-24">
     <div class="container-page">
       <div class="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-        <div class="lg:sticky lg:top-28">
+        <div class="lg:sticky lg:top-28" data-reveal="left">
           <SectionHeading
             eyebrow="Overview"
             title={`${product.title} details`}
             description={product.summary}
           />
 
-          <div class="mt-8 hidden rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm lg:block">
+          <div class="surface-card mt-8 hidden p-6 lg:block">
             <div class="flex items-start gap-4">
               <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
                 <BookOpenText className="size-6" />
@@ -83,10 +83,10 @@ const hasRelatedProducts = relatedProducts.length > 0;
           </div>
         </div>
 
-        <div>
+        <div data-reveal="right">
           {
             hasFeatures ? (
-              <div class="rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm sm:p-8">
+              <div class="surface-card p-6 sm:p-8">
                 <div class="mb-6 flex items-start gap-4">
                   <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
                     <ListChecks className="size-6" />
@@ -105,7 +105,7 @@ const hasRelatedProducts = relatedProducts.length > 0;
                 <FeatureList items={product.features} />
               </div>
             ) : (
-              <div class="rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm sm:p-8">
+              <div class="surface-card p-6 sm:p-8">
                 <div class="flex items-start gap-4">
                   <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
                     <FileText className="size-6" />
@@ -130,7 +130,7 @@ const hasRelatedProducts = relatedProducts.length > 0;
 
   {
     hasSections && (
-      <section class="bg-brand-card py-16 sm:py-20 lg:py-24">
+      <section class="section-shell bg-brand-card py-16 sm:py-20 lg:py-24">
         <div class="container-page">
           <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <SectionHeading
@@ -139,7 +139,7 @@ const hasRelatedProducts = relatedProducts.length > 0;
               description="Additional product details, process notes and catalogue points related to this product."
             />
 
-            <div class="rounded-[2rem] border border-brand-border bg-white p-6 shadow-sm">
+            <div class="surface-card rounded-[2rem] p-6" data-reveal="right">
               <div class="flex items-start gap-4">
                 <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
                   <Layers className="size-6" />
@@ -157,10 +157,10 @@ const hasRelatedProducts = relatedProducts.length > 0;
             </div>
           </div>
 
-          <div class="mt-12 divide-y divide-brand-border overflow-hidden rounded-[2rem] border border-brand-border bg-white shadow-sm">
+          <div class="surface-card mt-12 divide-y divide-brand-border overflow-hidden">
             {
               product.sections?.map((section, index) => (
-                <article class="grid gap-6 p-6 sm:p-8 lg:grid-cols-[0.38fr_0.62fr] lg:gap-10">
+                <article class="grid gap-6 p-6 sm:p-8 lg:grid-cols-[0.38fr_0.62fr] lg:gap-10" data-reveal="up">
                   <div>
                     <div class="inline-flex size-12 items-center justify-center rounded-2xl bg-brand-green/10 text-sm font-black text-brand-green">
                       {String(index + 1).padStart(2, "0")}
@@ -185,10 +185,10 @@ const hasRelatedProducts = relatedProducts.length > 0;
 
   {
     (hasApplications || hasSpecifications) && (
-      <section class="bg-background py-16 sm:py-20 lg:py-24">
+      <section class="section-shell bg-background py-16 sm:py-20 lg:py-24">
         <div class="container-page">
           <div class="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-            <div class="lg:sticky lg:top-28">
+            <div class="lg:sticky lg:top-28" data-reveal="left">
               <SectionHeading
                 eyebrow="Technical Scope"
                 title={hasApplications ? "Applications and specifications" : "Technical specifications"}
@@ -203,7 +203,7 @@ const hasRelatedProducts = relatedProducts.length > 0;
             <div class="grid gap-6">
               {
                 hasApplications && (
-                  <article class="rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm sm:p-7">
+                  <article class="surface-card p-6 sm:p-7" data-reveal="right">
                     <div class="mb-6 flex items-start gap-4">
                       <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
                         <BadgeCheck className="size-6" />
@@ -241,7 +241,7 @@ const hasRelatedProducts = relatedProducts.length > 0;
 
   {
     hasRelatedProducts && (
-      <section class="bg-brand-card py-16 sm:py-20 lg:py-24">
+      <section class="section-shell bg-brand-card py-16 sm:py-20 lg:py-24">
         <div class="container-page">
           <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <SectionHeading
@@ -250,7 +250,7 @@ const hasRelatedProducts = relatedProducts.length > 0;
               description="Explore related machinery and equipment from the Sai Feed Equipment product range."
             />
 
-            <div class="rounded-[2rem] border border-brand-border bg-white p-6 shadow-sm">
+            <div class="surface-card rounded-[2rem] p-6" data-reveal="right">
               <div class="flex items-start gap-4">
                 <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
                   <Settings className="size-6" />
@@ -268,7 +268,7 @@ const hasRelatedProducts = relatedProducts.length > 0;
             </div>
           </div>
 
-          <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
             {
               relatedProducts.map((related) => (
                 <ProductCard product={related} />

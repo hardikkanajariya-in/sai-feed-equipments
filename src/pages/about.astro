@@ -94,10 +94,10 @@ const teamMembers = [
     imageAlt="Sai Feed Equipment animal feed plant solution"
   />
 
-  <section class="bg-background py-16 sm:py-20 lg:py-24">
+  <section class="section-shell bg-background py-16 sm:py-20 lg:py-24">
     <div class="container-page">
       <div class="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
-        <div class="lg:sticky lg:top-28">
+        <div class="lg:sticky lg:top-28" data-reveal="left">
           <p
             class="text-sm font-black uppercase tracking-[0.28em] text-brand-green"
           >
@@ -115,7 +115,7 @@ const teamMembers = [
           </p>
         </div>
 
-        <div>
+        <div data-reveal="right">
           <div class="space-y-6 text-lg leading-9 text-brand-muted">
             <p>
               Sai Feed Equipment manufactures feed plants and spare equipment
@@ -136,10 +136,10 @@ const teamMembers = [
             </p>
           </div>
 
-          <div class="mt-9 grid gap-3 sm:grid-cols-2">
+          <div class="mt-9 grid gap-3 sm:grid-cols-2" data-stagger>
             {
               processFocus.map((item) => (
-                <div class="flex min-h-14 items-center gap-3 rounded-full border border-brand-border bg-card px-5 shadow-sm">
+                <div class="surface-card flex min-h-14 items-center gap-3 rounded-full px-5">
                   <BadgeCheck className="size-5 shrink-0 text-brand-green" />
                   <span class="text-sm font-black text-brand-navy">{item}</span>
                 </div>
@@ -151,7 +151,7 @@ const teamMembers = [
     </div>
   </section>
 
-  <section class="bg-brand-card py-16 sm:py-20 lg:py-24">
+  <section class="section-shell bg-brand-card py-16 sm:py-20 lg:py-24">
     <div class="container-page">
       <div class="mx-auto max-w-3xl text-center">
         <p
@@ -167,13 +167,13 @@ const teamMembers = [
         </h2>
       </div>
 
-      <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <div class="mt-12 grid gap-6 md:grid-cols-3" data-stagger>
         {
           capabilities.map((item) => {
             const Icon = item.icon;
 
             return (
-              <article class="group relative overflow-hidden rounded-[2rem] border border-brand-border bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl">
+              <article class="surface-card interactive-panel group relative p-7 transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl" data-tilt>
                 <div class="absolute right-0 top-0 size-28 translate-x-8 -translate-y-8 rounded-full bg-brand-green/10 transition duration-300 group-hover:scale-125" />
 
                 <div class="relative flex size-14 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
@@ -195,10 +195,10 @@ const teamMembers = [
     </div>
   </section>
 
-  <section class="bg-background py-16 sm:py-20 lg:py-24">
+  <section class="section-shell bg-background py-16 sm:py-20 lg:py-24">
     <div class="container-page">
       <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-        <div>
+        <div data-reveal="left">
           <p
             class="text-sm font-black uppercase tracking-[0.28em] text-brand-green"
           >
@@ -217,7 +217,7 @@ const teamMembers = [
           </p>
         </div>
 
-        <div class="relative">
+        <div class="relative" data-stagger>
           <div
             class="absolute left-6 top-6 hidden h-[calc(100%-3rem)] w-px bg-brand-border sm:block"
           >
@@ -226,7 +226,7 @@ const teamMembers = [
           <div class="grid gap-5">
             {
               timeline.map((item, index) => (
-                <article class="relative rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm transition duration-300 hover:border-brand-green hover:shadow-lg sm:ml-16">
+                <article class="surface-card relative p-6 transition duration-300 hover:border-brand-green hover:shadow-lg sm:ml-16">
                   <div class="absolute -left-[4.65rem] top-6 hidden size-12 items-center justify-center rounded-full border border-brand-border bg-background text-sm font-black text-brand-green sm:flex">
                     {String(index + 1).padStart(2, "0")}
                   </div>
@@ -252,7 +252,7 @@ const teamMembers = [
   </section>
 
   <section
-    class="relative overflow-hidden bg-brand-navy py-16 text-white sm:py-20 lg:py-24"
+    class="section-shell section-shell--dark relative overflow-hidden bg-brand-navy py-16 text-white sm:py-20 lg:py-24"
   >
     <div class="absolute inset-0 opacity-25">
       <div
@@ -267,7 +267,7 @@ const teamMembers = [
 
     <div class="container-page relative">
       <div class="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
-        <div>
+        <div data-reveal="left">
           <p
             class="text-sm font-black uppercase tracking-[0.28em] text-brand-green"
           >
@@ -284,10 +284,10 @@ const teamMembers = [
           </p>
         </div>
 
-        <div class="grid gap-4 sm:grid-cols-2">
+        <div class="grid gap-4 sm:grid-cols-2" data-stagger>
           {
             site.manufactures.map((item) => (
-              <div class="group flex min-h-24 items-center gap-4 rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:bg-white/[0.07]">
+              <div class="surface-card-dark group flex min-h-24 items-center gap-4 rounded-[1.75rem] p-5 transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:bg-white/[0.07]">
                 <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/15 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
                   <Settings className="size-6" />
                 </div>

@@ -10,14 +10,15 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
   {
     items.map((item, index) => (
       <figure
         class:list={[
-          "group relative overflow-hidden rounded-[2rem] border border-brand-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl",
+          "surface-card interactive-panel group relative transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl",
           index === 0 ? "lg:col-span-2" : "",
         ]}
+        data-tilt
       >
         <div
           class:list={[

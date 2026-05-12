@@ -46,11 +46,11 @@ const contactCards = [
     description={site.backCoverTagline}
   />
 
-  <section class="bg-background py-16 sm:py-20">
+  <section class="section-shell bg-background py-16 sm:py-20">
     <div class="container-page grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-      <aside class="grid content-start gap-5">
+      <aside class="grid content-start gap-5" data-stagger>
         <div
-          class="group rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl"
+          class="surface-card group rounded-[2rem] p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl"
         >
           <div class="flex items-start gap-4">
             <div
@@ -84,7 +84,7 @@ const contactCards = [
         </div>
 
         <div
-          class="rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm"
+          class="surface-card rounded-[2rem] p-6"
         >
           <div class="flex items-start gap-4">
             <div
@@ -139,7 +139,7 @@ const contactCards = [
         </div>
       </aside>
 
-      <div id="inquiry-form" class="scroll-mt-28">
+      <div id="inquiry-form" class="scroll-mt-28" data-reveal="right">
         <ContactForm />
       </div>
     </div>

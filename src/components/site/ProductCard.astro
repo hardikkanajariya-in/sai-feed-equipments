@@ -12,7 +12,9 @@ const { product } = Astro.props;
 
 <a
   href={`/products/${product.slug}`}
-  class="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-brand-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl"
+  class="surface-card interactive-panel group relative flex h-full flex-col transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl"
+  data-reveal="zoom"
+  data-tilt
 >
   <div class="relative aspect-[4/3] overflow-hidden bg-white">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(0,166,81,0.10),transparent_45%)]"></div>

@@ -47,15 +47,15 @@ const solutionStats = [
     imageAlt={featuredSolution?.imageAlt ?? "Sai Feed Equipment plant solutions"}
   />
 
-  <section class="bg-background py-14 sm:py-16">
+  <section class="section-shell bg-background py-14 sm:py-16">
     <div class="container-page">
-      <div class="grid gap-4 md:grid-cols-3">
+      <div class="grid gap-4 md:grid-cols-3" data-stagger>
         {
           solutionStats.map((item) => {
             const Icon = item.icon;
 
             return (
-              <div class="group rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl">
+              <div class="surface-card interactive-panel group rounded-[2rem] p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl" data-tilt>
                 <div class="flex items-center gap-4">
                   <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
                     <Icon className="size-6" />
@@ -78,7 +78,7 @@ const solutionStats = [
     </div>
   </section>
 
-  <section class="bg-brand-card py-16 sm:py-20 lg:py-24">
+  <section class="section-shell bg-brand-card py-16 sm:py-20 lg:py-24">
     <div class="container-page">
       <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
         <SectionHeading
@@ -87,7 +87,7 @@ const solutionStats = [
           description="Browse plant solution pages prepared from the catalogue content, including process sections, machinery connections and support details."
         />
 
-        <div class="rounded-[2rem] border border-brand-border bg-white p-6 shadow-sm">
+        <div class="surface-card rounded-[2rem] p-6" data-reveal="right">
           <div class="flex items-start gap-4">
             <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
               <Factory className="size-6" />
@@ -106,14 +106,14 @@ const solutionStats = [
         </div>
       </div>
 
-      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+      <div class="mt-10 grid gap-6 lg:grid-cols-3" data-stagger>
         {
           solutions.map((solution) => (
             <SolutionCard solution={solution} />
           ))
         }
 
-        <article class="group relative grid h-full overflow-hidden rounded-[2rem] border border-dashed border-brand-green/45 bg-white/70 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:bg-white hover:shadow-xl">
+        <article class="interactive-panel group relative grid h-full overflow-hidden rounded-[2rem] border border-dashed border-brand-green/45 bg-white/80 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:bg-white hover:shadow-xl" data-reveal="zoom" data-tilt>
           <div class="absolute right-0 top-0 size-32 translate-x-10 -translate-y-10 rounded-full bg-brand-green/10 transition duration-300 group-hover:scale-125"></div>
 
           <div class="relative flex min-h-[18rem] flex-col justify-between">

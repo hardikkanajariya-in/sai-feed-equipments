@@ -12,24 +12,26 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative overflow-hidden bg-brand-navy py-16 text-white sm:py-20">
+<section class="section-shell section-shell--dark relative overflow-hidden bg-brand-navy py-16 text-white sm:py-20">
   <div class="absolute inset-0 opacity-20">
     <div class="absolute -left-24 top-0 size-72 rounded-full bg-brand-green blur-3xl"></div>
     <div class="absolute bottom-0 right-0 size-96 rounded-full bg-brand-steel blur-3xl"></div>
   </div>
-  <div class="container-page relative grid gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-center">
-    <div>
-      <p class="text-sm font-black uppercase tracking-[0.24em] text-brand-green">Inquiry</p>
+  <div class="container-page relative">
+    <div class="surface-card-dark interactive-panel grid gap-8 px-6 py-8 sm:px-8 sm:py-10 lg:grid-cols-[1fr_0.72fr] lg:items-center lg:px-10" data-tilt>
+      <div data-reveal="left">
+        <p class="text-sm font-black uppercase tracking-[0.24em] text-brand-green">Inquiry</p>
       <h2 class="mt-3 max-w-3xl text-3xl font-black tracking-tight sm:text-4xl">{title}</h2>
       <p class="mt-5 max-w-2xl text-base leading-8 text-white/70">{description}</p>
-    </div>
-    <div class="flex flex-col gap-3 sm:flex-row lg:justify-end">
-      <a href="/contact" class="inline-flex min-h-12 items-center justify-center rounded-full bg-brand-green px-7 text-sm font-black text-white transition hover:bg-brand-green-dark">
-        Send Inquiry
-      </a>
-      <a href={`tel:${site.phones[0].replaceAll("-", "")}`} class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-7 text-sm font-black text-white transition hover:bg-white/10">
-        Call {site.phones[0]}
-      </a>
+      </div>
+      <div class="flex flex-col gap-3 sm:flex-row lg:justify-end" data-reveal="right">
+        <a href="/contact" class="inline-flex min-h-12 items-center justify-center rounded-full bg-brand-green px-7 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-brand-green-dark">
+          Send Inquiry
+        </a>
+        <a href={`tel:${site.phones[0].replaceAll("-", "")}`} class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-7 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-white/10">
+          Call {site.phones[0]}
+        </a>
+      </div>
     </div>
   </div>
 </section>

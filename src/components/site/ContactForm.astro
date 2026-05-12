@@ -2,7 +2,7 @@
 import { site } from "@/data/site";
 ---
 
-<form action={`mailto:${site.email}`} method="post" enctype="text/plain" class="grid gap-4 rounded-3xl border border-brand-border bg-card p-5 shadow-sm sm:p-6">
+<form action={`mailto:${site.email}`} method="post" enctype="text/plain" class="surface-card grid gap-4 p-5 sm:p-6" data-reveal="up">
   <div class="grid gap-2">
     <label for="name" class="text-sm font-bold text-brand-navy">Name</label>
     <input id="name" name="Name" required class="min-h-12 rounded-2xl border border-brand-border bg-white px-4 text-base outline-none transition focus:border-brand-green focus:ring-4 focus:ring-brand-green/10" />

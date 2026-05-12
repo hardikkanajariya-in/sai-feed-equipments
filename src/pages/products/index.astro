@@ -40,15 +40,15 @@ const productStats = [
     imageAlt={featuredProducts[0]?.imageAlt ?? "Sai Feed Equipment product range"}
   />
 
-  <section class="bg-background py-14 sm:py-16">
+  <section class="section-shell bg-background py-14 sm:py-16">
     <div class="container-page">
-      <div class="grid gap-4 md:grid-cols-3">
+      <div class="grid gap-4 md:grid-cols-3" data-stagger>
         {
           productStats.map((item) => {
             const Icon = item.icon;
 
             return (
-              <div class="group rounded-[2rem] border border-brand-border bg-card p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl">
+              <div class="surface-card interactive-panel group rounded-[2rem] p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:shadow-xl" data-tilt>
                 <div class="flex items-center gap-4">
                   <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
                     <Icon className="size-6" />
@@ -71,7 +71,7 @@ const productStats = [
     </div>
   </section>
 
-  <section class="bg-brand-card py-16 sm:py-20 lg:py-24">
+  <section class="section-shell bg-brand-card py-16 sm:py-20 lg:py-24">
     <div class="container-page">
       <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
         <SectionHeading
@@ -80,7 +80,7 @@ const productStats = [
           description="Browse product pages for machinery, process equipment, material handling systems, automation, dies and rolls."
         />
 
-        <div class="rounded-[2rem] border border-brand-border bg-white p-6 shadow-sm">
+        <div class="surface-card rounded-[2rem] p-6" data-reveal="right">
           <div class="flex items-start gap-4">
             <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
               <Factory className="size-6" />
@@ -99,14 +99,14 @@ const productStats = [
         </div>
       </div>
 
-      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
   {
     products.map((product) => (
       <ProductCard product={product} />
     ))
   }
 
-  <article class="group relative flex h-full min-h-[32rem] flex-col overflow-hidden rounded-[2rem] border border-dashed border-brand-green/45 bg-white/70 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:bg-white hover:shadow-xl">
+  <article class="interactive-panel group relative flex h-full min-h-[32rem] flex-col overflow-hidden rounded-[2rem] border border-dashed border-brand-green/45 bg-white/80 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green hover:bg-white hover:shadow-xl" data-reveal="zoom" data-tilt>
     <div class="absolute right-0 top-0 size-32 translate-x-10 -translate-y-10 rounded-full bg-brand-green/10 transition duration-300 group-hover:scale-125"></div>
     <div class="absolute bottom-0 left-0 size-40 -translate-x-12 translate-y-12 rounded-full bg-brand-steel/10 transition duration-300 group-hover:scale-125"></div>
 

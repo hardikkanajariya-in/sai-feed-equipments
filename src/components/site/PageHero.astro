@@ -22,7 +22,7 @@ const {
 const hasImage = Boolean(image);
 ---
 
-<section class="relative overflow-hidden bg-brand-navy text-white">
+<section class="section-shell section-shell--dark relative overflow-hidden bg-brand-navy text-white">
   <div class="absolute inset-0 opacity-35">
     <div
       class="absolute -left-32 top-10 size-80 rounded-full bg-brand-green blur-3xl"
@@ -41,7 +41,7 @@ const hasImage = Boolean(image);
   {
     hasImage ? (
       <div class="container-page relative grid min-h-[52svh] gap-10 py-14 sm:py-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-        <div class="animate-in fade-in slide-in-from-left-4 duration-700">
+        <div data-reveal="left">
           <div class="inline-flex items-center gap-3 rounded-full border border-brand-green/25 bg-brand-green/10 px-4 py-2 text-sm font-black uppercase tracking-[0.22em] text-brand-green shadow-sm shadow-brand-green/10 backdrop-blur">
             <span class="size-2 rounded-full bg-brand-green shadow-[0_0_18px_rgba(0,166,81,0.8)]" />
             <span>{eyebrow}</span>
@@ -58,10 +58,10 @@ const hasImage = Boolean(image);
           )}
         </div>
 
-        <div class="relative animate-in fade-in slide-in-from-right-4 duration-700">
+        <div class="relative float-soft" data-reveal="right">
           <div class="absolute -inset-4 rounded-[2.5rem] bg-brand-green/15 blur-2xl" />
 
-          <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl backdrop-blur">
+          <div class="surface-card-dark interactive-panel relative p-3" data-tilt>
             <OptimizedPicture
               src={image}
               alt={imageAlt}
@@ -87,10 +87,11 @@ const hasImage = Boolean(image);
         ]}
       >
         <div
-          class:list={[
-            "animate-in fade-in slide-in-from-bottom-4 duration-700",
+        class:list={[
+            "",
             align === "center" ? "mx-auto max-w-4xl" : "max-w-4xl",
           ]}
+          data-reveal="up"
         >
           <div class="inline-flex items-center gap-3 rounded-full border border-brand-green/25 bg-brand-green/10 px-4 py-2 text-sm font-black uppercase tracking-[0.22em] text-brand-green shadow-sm shadow-brand-green/10 backdrop-blur">
             <span class="size-2 rounded-full bg-brand-green shadow-[0_0_18px_rgba(0,166,81,0.8)]" />
