@@ -3,7 +3,7 @@ import { readdir, mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const rootDir = process.cwd();
-const imagesDir = path.join(rootDir, "public", "images");
+const imagesDir = path.join(rootDir, "public", "images", "gallery");
 
 const widths = [480, 768, 1024, 1440];
 

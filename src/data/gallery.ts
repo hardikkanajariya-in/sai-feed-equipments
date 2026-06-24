@@ -62,7 +62,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     title: "Vibro Sieve",
-    image: "/images/gallery/vibro-sieve.png",
+    image: "/images/gallery/bibro-sieve.png",
     alt: "Vibro sieve product image",
     category: "Product",
   },
