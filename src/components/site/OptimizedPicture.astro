@@ -40,7 +40,7 @@ const fallbackWidth = availableWidths.at(-1);
 const fallback = fallbackWidth ? `${base}-${fallbackWidth}.webp` : src;
 ---
 
-<picture>
+<picture class="contents">
   {avifSrcset && <source type="image/avif" srcset={avifSrcset} sizes={sizes} />}
   {webpSrcset && <source type="image/webp" srcset={webpSrcset} sizes={sizes} />}
   <img
